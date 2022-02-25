@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="resume" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot; Not A;Brand&quot;;v=&quot;99&quot;, &quot;Chromium&quot;;v=&quot;98&quot;, &quot;Google Chrome&quot;;v=&quot;98&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">api.segment.io</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">cdn.myth.theoplayer.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">d1gnaphp93fop2.cloudfront.net</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:33.312Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;bitrate&quot;:0,&quot;content_asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;framerate&quot;:29,&quot;full_screen&quot;:true,&quot;livestream&quot;:false,&quot;position&quot;:0,&quot;quality&quot;:&quot;default&quot;,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;sound&quot;:100,&quot;total_length&quot;:1902,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Video Playback Buffer Completed&quot;,&quot;messageId&quot;:&quot;ajs-76e9bd2ab335a1775997e2bf9c2f99d9&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:33.337Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/p" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:33.361Z&quot;,&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;integrations&quot;:{},&quot;properties&quot;:{&quot;name&quot;:&quot;Neou.Player&quot;,&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;category&quot;:null,&quot;name&quot;:&quot;Neou.Player&quot;,&quot;messageId&quot;:&quot;ajs-513879623e7fefd419b75dc6bccad03a&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;page&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:33.392Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/p</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:33.978Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;bitrate&quot;:0,&quot;content_asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;framerate&quot;:29,&quot;position&quot;:0,&quot;quality&quot;:&quot;Auto&quot;,&quot;session_id&quot;:&quot;15368&quot;,&quot;sound&quot;:100,&quot;video_player&quot;:&quot;HTML5&quot;,&quot;total_length&quot;:30,&quot;full_screen&quot;:true,&quot;livestream&quot;:false},&quot;event&quot;:&quot;Video Playback Resumed&quot;,&quot;messageId&quot;:&quot;ajs-2e520931bce8f471fe5e6877ff0333d6&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:34.012Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://cdn.myth.theoplayer.com/c0986b3d-eefa-4e8a-86f7-75a977b1bd45/theoplayer.e.js" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">c0986b3d-eefa-4e8a-86f7-75a977b1bd45/theoplayer.e.js</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://cdn.myth.theoplayer.com/c0986b3d-eefa-4e8a-86f7-75a977b1bd45/theoplayer.p.js" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">c0986b3d-eefa-4e8a-86f7-75a977b1bd45/theoplayer.p.js</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:34.819Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;bitrate&quot;:0,&quot;content_asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;framerate&quot;:29,&quot;position&quot;:0,&quot;quality&quot;:&quot;default&quot;,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;sound&quot;:100,&quot;video_player&quot;:&quot;HTML5&quot;,&quot;total_length&quot;:1902,&quot;full_screen&quot;:true,&quot;livestream&quot;:false},&quot;event&quot;:&quot;Video Playback Resumed&quot;,&quot;messageId&quot;:&quot;ajs-6e17bbbd32c269e70e068916b322e2ab&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:34.853Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:35.007Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;collection_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;collection&quot;:&quot;undefined&quot;,&quot;concept&quot;:&quot;ONEFIT&quot;,&quot;concept_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;collection_url&quot;:&quot;/concepts/onefit&quot;,&quot;video_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;video_title&quot;:&quot;Fresh Start: Beginner Total Body&quot;,&quot;fitness_device_connected&quot;:false,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Workout Started&quot;,&quot;messageId&quot;:&quot;ajs-607552b21a81c70d3b97afe3f9a52b9b&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:35.045Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:35.059Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;total_length&quot;:1902,&quot;collection_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;collection&quot;:&quot;undefined&quot;,&quot;concept&quot;:&quot;ONEFIT&quot;,&quot;concept_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;livestream&quot;:false,&quot;full_screen&quot;:true,&quot;bitrate&quot;:0,&quot;content_asset_ids&quot;:[&quot;617fffd5144778281f3e8ceb&quot;],&quot;framerate&quot;:29,&quot;position&quot;:0,&quot;quality&quot;:&quot;default&quot;,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;sound&quot;:100,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Video Playback Started&quot;,&quot;messageId&quot;:&quot;ajs-95cdedf15340deeed0f9948f8c765bba&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:35.103Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:35.115Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;collection_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;collection&quot;:&quot;undefined&quot;,&quot;concept&quot;:&quot;ONEFIT&quot;,&quot;concept_id&quot;:&quot;5eb6ba20e2c2621d3cb7ee1b&quot;,&quot;genre&quot;:[&quot;Strength&quot;],&quot;position&quot;:0,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;title&quot;:&quot;Fresh Start: Beginner Total Body&quot;,&quot;total_length&quot;:1902,&quot;video_type&quot;:&quot;workout&quot;,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Video Content Started&quot;,&quot;messageId&quot;:&quot;ajs-24b29d4e8c8dfd939368c3a4cfcd9c3d&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:35.159Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:35.175Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;bitrate&quot;:0,&quot;content_asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;framerate&quot;:29,&quot;full_screen&quot;:true,&quot;livestream&quot;:false,&quot;position&quot;:0,&quot;quality&quot;:&quot;default&quot;,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;sound&quot;:100,&quot;total_length&quot;:1902,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Video Playback Buffer Started&quot;,&quot;messageId&quot;:&quot;ajs-0c95df752329bd73d4526d833b24fc67&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:35.217Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/360p.m3u8" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/360p.m3u8</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.segment.io/v1/t" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;timestamp&quot;:&quot;2022-02-22T09:25:36.640Z&quot;,&quot;integrations&quot;:{},&quot;context&quot;:{&quot;page&quot;:{&quot;path&quot;:&quot;/neou/class/videos/fresh-start-beginner-total-body&quot;,&quot;referrer&quot;:&quot;&quot;,&quot;search&quot;:&quot;?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;,&quot;title&quot;:&quot;NEOU - Fresh Start: Beginner Total Body&quot;,&quot;url&quot;:&quot;https://neous-dev.neoufitness.com/neou/class/videos/fresh-start-beginner-total-body?seriesId=5eb6ba20e2c2621d3cb7ee1b&amp;seriesTitle=undefined&quot;},&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36&quot;,&quot;locale&quot;:&quot;en-US&quot;,&quot;library&quot;:{&quot;name&quot;:&quot;analytics.js&quot;,&quot;version&quot;:&quot;4.1.8&quot;},&quot;campaign&quot;:{}},&quot;properties&quot;:{&quot;bitrate&quot;:0,&quot;content_asset_id&quot;:&quot;617fffd5144778281f3e8ceb&quot;,&quot;framerate&quot;:29,&quot;full_screen&quot;:true,&quot;livestream&quot;:false,&quot;position&quot;:0,&quot;quality&quot;:&quot;default&quot;,&quot;session_id&quot;:&quot;oR5GMEBg2V1IrdZHKwkGmuIb8ct231GV&quot;,&quot;sound&quot;:100,&quot;total_length&quot;:1902,&quot;seek_position&quot;:0,&quot;source_url&quot;:&quot;https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/master.m3u8&quot;},&quot;event&quot;:&quot;Video Playback Seek Started&quot;,&quot;messageId&quot;:&quot;ajs-7de7fbde5baebbc6ff3af288e793f1ed&quot;,&quot;anonymousId&quot;:&quot;c7569fc9-da93-418a-ab5d-44c5dc5bf01d&quot;,&quot;type&quot;:&quot;track&quot;,&quot;writeKey&quot;:&quot;m6NtPjFBqSVjkSdgfPsRMj6BZaj2wwDK&quot;,&quot;userId&quot;:&quot;5fd33084ae511e093228bad2&quot;,&quot;sentAt&quot;:&quot;2022-02-22T09:25:36.671Z&quot;,&quot;_metadata&quot;:{&quot;bundled&quot;:[&quot;Segment.io&quot;],&quot;unbundled&quot;:[],&quot;bundledIds&quot;:[]}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">v1/t</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/360p_000.ts" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/360p_000.ts</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/1080p.m3u8" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/1080p.m3u8</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/1080p.m3u8" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/1080p.m3u8</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://d1gnaphp93fop2.cloudfront.net/videos/617fffd5144778281f3e8ceb/m3u8/1080p_001.ts" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">videos/617fffd5144778281f3e8ceb/m3u8/1080p_001.ts</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
